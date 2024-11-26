@@ -26,7 +26,7 @@ const AuthDialogue = ({ dialogue, mode }) => {
 
     try {
       const res = await axios.post(
-        "http://localhost:8080/api/auth/user/delete",
+        `${process.env.NEXT_PUBLIC_BACKEND_API}/auth/user/delete`,
         user,
         {
           withCredentials: true,
@@ -57,7 +57,7 @@ const AuthDialogue = ({ dialogue, mode }) => {
     };
     try {
       const res = await axios.post(
-        `${process.env.NEXT_PUBLIC_FRONTEND_HOST}/auth/update-password`,
+        `${process.env.NEXT_PUBLIC_BACKEND_API}/auth/update-password`,
         object,
         {
           withCredentials: true,
