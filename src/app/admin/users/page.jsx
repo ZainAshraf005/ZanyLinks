@@ -11,7 +11,7 @@ const page = () => {
   const getUsers = async () => {
     try {
       const res = await axios.get(
-        `${process.env.NEXT_PUBLIC_BACKEND_API}/auth/admin/users`,
+        `https://zanylinks.up.railway.app/api/auth/admin/users`,
         { withCredentials: true }
       );
       if (res.data?.success) {
