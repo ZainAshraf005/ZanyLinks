@@ -26,7 +26,7 @@ const AuthDialogue = ({ dialogue, mode }) => {
 
     try {
       const res = await axios.post(
-        `${process.env.NEXT_PUBLIC_BACKEND_API}/auth/user/delete`,
+        `https://zanylinks.up.railway.app/api/auth/user/delete`,
         user,
         {
           withCredentials: true,
@@ -57,7 +57,7 @@ const AuthDialogue = ({ dialogue, mode }) => {
     };
     try {
       const res = await axios.post(
-        `${process.env.NEXT_PUBLIC_BACKEND_API}/auth/update-password`,
+        `https://zanylinks.up.railway.app/api/auth/update-password`,
         object,
         {
           withCredentials: true,
