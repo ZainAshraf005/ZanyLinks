@@ -16,7 +16,7 @@ const AccountSettings = () => {
   const getData = async (username) => {
     try {
       const res = await axios.get(
-        `${process.env.NEXT_PUBLIC_FRONTEND_HOST}/links/${username}`,
+        `${process.env.NEXT_PUBLIC_BACKEND_API}/links/${username}`,
         { withCredentials: true }
       );
       if (res.data.success) {
