@@ -56,7 +56,7 @@ const ShowLinks = ({ username }) => {
   const handleDelete = async (platform) => {
     try {
       const res = await axios.delete(
-        `${process.env.NEXT_PUBLIC_BACKEND_API}/links/remove/${platform}`,
+        `https://zanylinks.up.railway.app/api/links/remove/${platform}`,
         { withCredentials: true }
       );
       if (res?.data?.success) {
@@ -72,7 +72,7 @@ const ShowLinks = ({ username }) => {
   const fetchLinks = async (username) => {
     try {
       const res = await axios.get(
-        `${process.env.NEXT_PUBLIC_BACKEND_API}/links/${username}`,
+        `https://zanylinks.up.railway.app/api/links/${username}`,
         { withCredentials: true }
       );
       if (res?.data?.success) {
