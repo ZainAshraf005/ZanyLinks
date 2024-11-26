@@ -13,7 +13,7 @@ const page = () => {
   const handleLogout = async () => {
     try {
       const res = await axios.get(
-        `${process.env.NEXT_PUBLIC_BACKEND_API}/auth/logout`,
+        `https://zanylinks.up.railway.app/api/auth/logout`,
         {
           withCredentials: true,
         }
