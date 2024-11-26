@@ -72,7 +72,7 @@ const ShowLinks = ({ username }) => {
   const fetchLinks = async (username) => {
     try {
       const res = await axios.get(
-        `http://localhost:8080/api/links/${username}`,
+        `${process.env.NEXT_PUBLIC_BACKEND_API}/links/${username}`,
         { withCredentials: true }
       );
       if (res?.data?.success) {
