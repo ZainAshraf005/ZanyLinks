@@ -16,7 +16,7 @@ const ShowImage = () => {
   const getImage = async (username) => {
     try {
       const res = await axios.get(
-        `${process.env.NEXT_PUBLIC_BACKEND_API}/auth/${username}/image`,
+        `https://zanylinks.up.railway.app/api/auth/${username}/image`,
         { withCredentials: true }
       );
       if (res.data?.success && res.data?.profileImage.length > 0) {
@@ -39,7 +39,7 @@ const ShowImage = () => {
     formData.append("image", file);
     try {
       const res = await axios.post(
-        `${process.env.NEXT_PUBLIC_BACKEND_API}/auth/upload/profile`,
+        `https://zanylinks.up.railway.app/api/auth/upload/profile`,
         formData,
         {
           withCredentials: true,
