@@ -49,7 +49,7 @@ const ShowImage = () => {
         }
       );
       if (res.data?.success) {
-        toast.success(res.data.message || "Image uploaded successfully");
+        toast.success(res.data.message || "Image of this type is not acceptable");
         setImagePhoto(res.data.filePath.replace(/\\/g, "/"));
 
         window.location.reload();
