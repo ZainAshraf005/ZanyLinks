@@ -31,7 +31,7 @@ const Dialouge = ({ link, dialouge, mode }) => {
     if (handleCheck(object.newPlatform, object.newUrl)) {
       try {
         const res = await axios.patch(
-          `${process.env.NEXT_PUBLIC_FRONTEND_HOST}/links/update`,
+          `${process.env.NEXT_PUBLIC_BACKEND_API}/links/update`,
           object,
           {
             withCredentials: true,
@@ -59,7 +59,7 @@ const Dialouge = ({ link, dialouge, mode }) => {
     if (handleCheck(object.platform, object.url)) {
       try {
         const res = await axios.post(
-          `${process.env.NEXT_PUBLIC_FRONTEND_HOST}/links/add`,
+          `${process.env.NEXT_PUBLIC_BACKEND_API}/links/add`,
           [object],
           {
             withCredentials: true,
