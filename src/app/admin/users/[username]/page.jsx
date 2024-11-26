@@ -19,7 +19,7 @@ const page = () => {
   const deleteUser = async () => {
     try {
       const res = await axios.post(
-        `${process.env.NEXT_PUBLIC_BACKEND_API}/auth/admin/user/delete`,
+        `https://zanylinks.up.railway.app/api/auth/admin/user/delete`,
         { username },
         {
           withCredentials: true,
@@ -40,7 +40,7 @@ const page = () => {
   const getUsers = async () => {
     try {
       const res = await axios.get(
-        `${process.env.NEXT_PUBLIC_BACKEND_API}/auth/admin/users`,
+        `https://zanylinks.up.railway.app/api/auth/admin/users`,
         { withCredentials: true }
       );
       if (res.data?.success) {
