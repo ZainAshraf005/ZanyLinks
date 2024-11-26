@@ -33,7 +33,7 @@ const page = () => {
     try {
       e.preventDefault();
       const res = await axios.post(
-        `${process.env.NEXT_PUBLIC_BACKEND_API}/auth/signup`,
+        `https://zanylinks.up.railway.app/api/auth/signup`,
         user,
         {
           withCredentials: true,
