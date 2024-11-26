@@ -33,7 +33,7 @@ const page = () => {
     try {
       e.preventDefault();
       const res = await axios.post(
-        `${process.env.NEXT_PUBLIC_FRONTEND_HOST}/auth/signup`,
+        `${process.env.NEXT_PUBLIC_BACKEND_API}/auth/signup`,
         user,
         {
           withCredentials: true,
