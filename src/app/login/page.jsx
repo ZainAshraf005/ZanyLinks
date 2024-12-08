@@ -71,7 +71,7 @@ const page = () => {
           <div className="heading w-full text-center text-3xl font-semibold pt-12 sm:pt-6">
             Join ZanyLinks
           </div>
-          <p className="w-full text-center mt-3">Login for free</p>
+          <p className="w-full text-center mt-3">Login to your account</p>
           <div className="w-[80%] h-fit m-auto">
             <form
               onSubmit={handleSubmit}
