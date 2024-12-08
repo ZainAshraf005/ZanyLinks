@@ -53,7 +53,7 @@ const Dialouge = ({ link, dialouge, mode }) => {
   const handleAdd = async (e) => {
     e.preventDefault();
     const object = {
-      platform,
+      platform:platform.toLowerCase(),
       url,
     };
     if (handleCheck(object.platform, object.url)) {
