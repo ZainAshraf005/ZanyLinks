@@ -55,7 +55,7 @@ const ShowLinks = ({ username }) => {
 
   const handleDelete = async (platform) => {
     try {
-      const res = await axios.delete(
+      const res = await axios.post(
         `https://zanylinks.up.railway.app/api/links/remove/${platform}`,
         { withCredentials: true }
       );
