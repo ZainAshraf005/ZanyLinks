@@ -25,7 +25,7 @@ const Dialouge = ({ link, dialouge, mode }) => {
     e.preventDefault();
     const object = {
       platform: link.platform,
-      newPlatform: platform,
+      newPlatform: platform.toLowerCase(),
       newUrl: url,
     };
     if (handleCheck(object.newPlatform, object.newUrl)) {
