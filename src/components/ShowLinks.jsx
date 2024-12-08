@@ -122,7 +122,7 @@ const ShowLinks = ({ username }) => {
                   ref={index === links.length - 1 ? latestNodeRef : null}
                 >
                   <div className="w-fit">
-                    <div>{link.platform}</div>
+                    <div className="capitalize">{link.platform}</div>
                     <div className="text-zinc-700 w-52 sm:w-72 md:w-96 overflow-ellipsis overflow-hidden ">
                       {link.url}
                     </div>
