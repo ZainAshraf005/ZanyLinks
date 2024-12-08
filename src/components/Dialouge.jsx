@@ -30,7 +30,7 @@ const Dialouge = ({ link, dialouge, mode }) => {
     };
     if (handleCheck(object.newPlatform, object.newUrl)) {
       try {
-        const res = await axios.patch(
+        const res = await axios.post(
           `https://zanylinks.up.railway.app/api/links/update`,
           object,
           {
